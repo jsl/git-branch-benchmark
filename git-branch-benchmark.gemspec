@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "git-branch-benchmark"
-  s.version  = "0.1"
+  s.version  = "0.2"
   s.date     = "2009-01-19"
   s.summary  = "Tool for git branch benchmarking"
   s.email    = "justin@phq.org"
