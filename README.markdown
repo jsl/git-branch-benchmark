@@ -15,7 +15,7 @@ in the near future.
 Installation
 ------------
 
-sudo gem install git-branch-benchmark
+sudo gem install jsl-git-branch-benchmark
 
 Usage Examples
 --------------
