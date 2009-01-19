@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+require 'getoptlong'
+require 'rdoc/usage'
+require File.join(File.dirname(__FILE__), %w{.. lib git_branch_benchmark})
+
+def parse_options
+
+  opts = GetoptLong.new(
+    [ '--help',     '-h', GetoptLong::NO_ARGUMENT       ],
+    [ '--branch',   '-b', GetoptLong::REQUIRED_ARGUMENT ],
+    [ '--url',      '-u', GetoptLong::REQUIRED_ARGUMENT ],
+    [ '--verbose',  '-v', GetoptLong::OPTIONAL_ARGUMENT ]
+  )
+
+  branches = []
+  urls = []
+  verbosity = 0
+
+  opts.each do |opt, arg|
+    case opt
+    when '--branch'
+      branches << arg
+    when '--url'
+      urls << arg
+    when '--verbose'
+      verbosity += 1
+    when '--stash'
+      stash = true
+    end
+  end
+
+  raise ArgumentError, "We need some urls to benchmark" unless urls.size  >= 1
+ 
+  [ branches, urls, verbosity ]
+end
+
+def main
+  branches, urls, verbosity = parse_options
+  gbb = GitBranchBenchmark.new
+  gbb.branches = branches
+  gbb.urls = urls
+  gbb.verbosity = verbosity
+  gbb.run!
+end
+
+main
