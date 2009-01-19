@@ -10,13 +10,13 @@ Gem::Specification.new do |s|
   s.authors  = ["Justin Leitgeb"]
   s.files    = ["Rakefile",
 		"lib/git_branch_benchmark.rb",
-		"README",
+		"README.markdown",
 		"bin/gbb",
 		"git_branch_benchmark.gemspec"]
   s.test_files = [ ]
-  s.rdoc_options = ["--main", "README"]
+  s.rdoc_options = ["--main", "README.markdown"]
   s.executables = 'gbb'
-  s.extra_rdoc_files = ["README"]
-  s.add_dependency("ruby-git", ["> 0.0.0"])
+  s.extra_rdoc_files = ["README.markdown"]
+  s.add_dependency("git", ["> 0.0.0"])
   s.add_dependency("curb", ["> 0.0.0"])
 end

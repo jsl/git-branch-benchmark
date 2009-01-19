@@ -12,16 +12,21 @@ This is really just quick prototype code to be expanded later, though it may
 be useful in its current state.  Libraries and command-line options may change
 in the near future.
 
-Examples
---------
+Installation
+------------
+
+sudo gem install git-branch-benchmark
+
+Usage Examples
+--------------
 
 
-1. ruby bin/gbb -b test2 -u http://localhost:3000/test -u http://localhost:3000/test2
+1. gbb -b test2 -u http://localhost:3000/test -u http://localhost:3000/test2
 
    tests the current branch against branch 'test2' and outputs average times for
    both tests.
 
-2. ruby bin/gbb -b test1 -b test2 -u http://localhost:3000/test
+2. gbb -b test1 -b test2 -u http://localhost:3000/test
 
    tests the url given in branch 'test1' and 'test2', outputting the average times
    for execution in both branches
