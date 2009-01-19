@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
-  s.name     = "git_branch_benchmark"
-  s.version  = "0.1"
+  s.name     = "git-branch-benchmark"
+  s.version  = "0.2"
   s.date     = "2009-01-19"
   s.summary  = "Tool for git branch benchmarking"
   s.email    = "justin@phq.org"
-  s.homepage = "http://github.com/jsl/git_branch_benchmark"
+  s.homepage = "http://github.com/jsl/git-branch-benchmark"
   s.description = "GitBrachBenchMark is a tool for testing performance of code in different git branches."
   s.has_rdoc = true
   s.authors  = ["Justin Leitgeb"]
