@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
 		"git_branch_benchmark.gemspec"]
   s.test_files = [ ]
   s.rdoc_options = ["--main", "README"]
+  s.executables = 'gbb'
   s.extra_rdoc_files = ["README"]
   s.add_dependency("ruby-git", ["> 0.0.0"])
   s.add_dependency("curb", ["> 0.0.0"])
