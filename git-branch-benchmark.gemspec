@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "git-branch-benchmark"
-  s.version  = "0.2"
+  s.version  = "0.1"
   s.date     = "2009-01-19"
   s.summary  = "Tool for git branch benchmarking"
   s.email    = "justin@phq.org"
@@ -12,11 +12,10 @@ Gem::Specification.new do |s|
 		"lib/git_branch_benchmark.rb",
 		"README.markdown",
 		"bin/gbb",
-		"git_branch_benchmark.gemspec"]
+		"git-branch-benchmark.gemspec"]
   s.test_files = [ ]
-  s.rdoc_options = ["--main", "README.markdown"]
+  s.rdoc_options = ["--main"]
   s.executables = 'gbb'
-  s.extra_rdoc_files = ["README.markdown"]
   s.add_dependency("git", ["> 0.0.0"])
   s.add_dependency("curb", ["> 0.0.0"])
 end
